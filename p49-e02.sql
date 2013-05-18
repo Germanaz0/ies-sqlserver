@@ -12,3 +12,5 @@
 SELECT Apellido, Nombre
 FROM SOLAlumno
 WHERE CodTipoDocu = 1 AND CodSexo = 2
+
+
