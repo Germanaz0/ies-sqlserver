@@ -149,6 +149,7 @@ CREATE TABLE [dbo].[SOLDocente](
 	[Piso] [varchar](4) NULL,
 	[Dto] [varchar](4) NULL,
 	[CodLocalidad] [int] NULL,
+	[CodProvincia] [int] NULL,
 	[eMail] [nvarchar](70) NULL,
 	[CodEstado] [char](1) NULL,
 ) ON [PRIMARY]
