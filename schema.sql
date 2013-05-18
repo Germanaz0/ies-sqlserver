@@ -154,6 +154,39 @@ CREATE TABLE [dbo].[SOLDocente](
 ) ON [PRIMARY]
 GO
 
+-- Tabla Docente Materia --
+CREATE TABLE [dbo].[SolDocenteMateria](
+	[CodMateria] [int] NOT NULL,
+	[CodDocente] [int] NOT NULL,
+	[FechaAlta] [datetime] NOT NULL,
+	[FechaBaja] [datetime] NULL,
+	[Motivo] [varchar](200) NULL,
+) ON [PRIMARY]
+GO
+
+-- Tabla Docente Sede --
+CREATE TABLE [dbo].[SOLDocenteSede](
+	[CodDocente] [int] NOT NULL,
+	[CodSede] [int] NOT NULL,
+) ON [PRIMARY]
+GO
+
+-- Tabla Docente Telefono --
+CREATE TABLE [dbo].[SOLDocenteTelefono](
+	[CodDocente] [int] NOT NULL,
+	[Telefono] [varchar](20) NOT NULL,
+	[CodTipoTelefono] [int] NULL,
+) ON [PRIMARY]
+GO
+
+-- Tabla Estado --
+CREATE TABLE [dbo].[SOLEstado](
+	[CodEstado] [char](1) NOT NULL,	
+	[Estado] [varchar](30) NULL,
+) ON [PRIMARY]
+GO
+
+
 /** BORRAR ESTO 
 
 -- Tabla NOMBRE --
