@@ -287,7 +287,7 @@ CREATE TABLE [dbo].[SOLTurno](
 GO
 
 -- Tabla Universidad --
-CREATE TABLE [dbo].[TableName](
+CREATE TABLE [dbo].[SOLUniversidad](
 	[CodUniversidad] [int] NOT NULL,
 	[Universidad] [varchar](100) NULL,
 	[DomLegal] [varchar](100) NULL,
