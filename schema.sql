@@ -209,12 +209,87 @@ CREATE TABLE [dbo].[SOLLocalidad](
 ) ON [PRIMARY]
 GO
 
-/** BORRAR ESTO 
-
--- Tabla NOMBRE --
-CREATE TABLE [dbo].[TableName](
-	[Cod] [int] NOT NULL,
+-- Tabla Materia --
+CREATE TABLE [dbo].[SOLMateria](
+	[CodMateria] [int] NOT NULL,
+	[Nombre] [varchar](70) NULL,
+	[Contenido] [nvarchar](200) NULL, 
 ) ON [PRIMARY]
 GO
 
-**/
+-- Tabla Materia Carrera --
+CREATE TABLE [dbo].[SOLMateriaCarrera](
+	[CodMateria] [int] NOT NULL,
+	[CodCarrera] [int] NOT NULL,
+) ON [PRIMARY]
+GO
+
+-- Tabla Provincia --
+CREATE TABLE [dbo].[SOLProvincia](
+	[CodProvincia] [int] NOT NULL,
+	[Provincia] [varchar](100) NULL,
+) ON [PRIMARY]
+GO
+
+-- Tabla Recargo --
+CREATE TABLE [dbo].[SOLRecargo](
+	[CodRecargo] [int] NOT NULL,
+	[Porcentaje] [int] NULL,
+	[Retraso] [varchar](10) NULL,
+) ON [PRIMARY]
+GO
+
+-- Tabla Sede --
+CREATE TABLE [dbo].[SOLSede](
+	[CodSede] [int] NOT NULL,
+	[NombreSede] [varchar](50) NULL,
+	[CodLocalidad] [int] NULL,
+	[CodProvincia] [int] NULL,
+	[Calle] [varchar](100) NULL,
+	[Nro] [varchar] (6) NULL,
+) ON [PRIMARY]
+GO
+
+-- Tabla SOLSexo --
+CREATE TABLE [dbo].[SOLSexo](
+	[CodSexo] [int] IDENTITY(1, 1) NOT NULL,
+	[Sexo] [varchar](50) NULL,
+) ON [PRIMARY]
+GO
+
+-- Tabla Tipo Documento --
+CREATE TABLE [dbo].[SOLTipoDocumento](
+	[CodTipoDocu] [int] NOT NULL,
+	[Tipo] [varchar](10) NULL,
+	[Descripcion] [varchar](30) NULL,
+) ON [PRIMARY]
+GO
+
+-- Tabla Tipo Examen --
+CREATE TABLE [dbo].[SOLTipoExamen](
+	[CodTipoExamen] [int] NOT NULL,
+	[Descripcion] [nvarchar](30) NULL,
+) ON [PRIMARY]
+GO
+
+-- Tabla Tipo Telefono --
+CREATE TABLE [dbo].[SOLTipoTelefono](
+	[CodTipoTelefono] [int] NOT NULL,
+	[TipoTelefono] [varchar](60) NULL,
+) ON [PRIMARY]
+GO
+
+-- Tabla SOLTurno --
+CREATE TABLE [dbo].[SOLTurno](
+	[CodTurno] [char](1) NOT NULL,
+	[Descripcion] [nvarchar](30) NULL,
+) ON [PRIMARY]
+GO
+
+-- Tabla Universidad --
+CREATE TABLE [dbo].[TableName](
+	[CodUniversidad] [int] NOT NULL,
+	[Universidad] [varchar](100) NULL,
+	[DomLegal] [varchar](100) NULL,
+) ON [PRIMARY]
+GO
