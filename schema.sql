@@ -186,6 +186,28 @@ CREATE TABLE [dbo].[SOLEstado](
 ) ON [PRIMARY]
 GO
 
+-- Tabla Facultad --
+CREATE TABLE [dbo].[SOLFacultad](
+	[CodFacultad] [varchar](4) NOT NULL,
+	[Facultad] [varchar](50) NOT NULL,
+	[CodUniversidad] [int] NULL,
+	[CodSede] [int] NULL,
+) ON [PRIMARY]
+GO
+
+-- Tabla Facultad Carrera --
+CREATE TABLE [dbo].[SOLFacultadCarrera](
+	[CodFacultad] [varchar](4) NOT NULL,
+	[CodCarrera] [int] NOT NULL,
+) ON [PRIMARY]
+GO
+
+-- Tabla Localidad --
+CREATE TABLE [dbo].[SOLLocalidad](
+	[CodLocalidad] [int] NOT NULL,
+	[Localidad] [varchar](100) NULL, 
+) ON [PRIMARY]
+GO
 
 /** BORRAR ESTO 
 
