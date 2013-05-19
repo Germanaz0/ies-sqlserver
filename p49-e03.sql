@@ -11,4 +11,4 @@
 
 SELECT eMail
 FROM SOLAlumno
-WHERE FechaNac BETWEEN '1970-01-01' AND '1980-12-31'
+WHERE FechaNac >= '1970-01-01' AND FechaNac <= '1980-12-31'
