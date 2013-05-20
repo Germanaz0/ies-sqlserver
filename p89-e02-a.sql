@@ -9,6 +9,6 @@
 *
 **/
 
-SELECT Legajo, COUNT(Telefono) as CantidadDeTelefonos
-FROM SOLAlumnoTelefono
-GROUP BY Legajo
+SELECT CodDocente, CantidadTipo = COUNT (CodTipoTelefono)
+FROM SolDocenteTelefono
+GROUP BY CodDocente
