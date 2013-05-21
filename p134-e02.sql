@@ -1,19 +1,28 @@
-/**
-* p134-e02.sql
-*
-* @author Bortoli German <germanazo@gmail.com>
-* 
-* 2013 - IES - Santa Fe - Santa Fe
-*
-* Enunciado: Redefina el procedimiento anterior para listar el mismo resultado, pero
-* agregandole el apellido al parametro de busqueda.
-*
-**/
+Create Procedure Cap923
 
-CREATE PROCEDURE BuscarTelefonosAlumnoPorApellido
-	@Apellido VARCHAR(50)
+@Legajo INT,
+
+@Apellido VARCHAR (70)
+
 AS
-	SELECT AL.Apellido, AL.Nombre, AL.Legajo, TEL.Telefono
-	FROM SOLAlumno AL
-	FULL OUTER JOIN SOLAlumnoTelefono TEL ON TEL.Legajo = AL.Legajo
-	WHERE AL.Apellido LIKE @Apellido + '%'
+
+IF  EXISTS (Select SOLAlumno.Legajo From SOLAlumno where SOLAlumno.Legajo= @Legajo and SOLAlumno.Apellido =@Apellido)
+
+BEGIN
+Select Legajo = SOLAlumno.Legajo, SOLAlumno.Apellido, SOLAlumno.Nombre
+from SOLAlumno
+
+where Legajo LIKE @Legajo 
+and Apellido like @Apellido
+Select  SOLAlumno.Legajo,SOLAlumnoTelefono.Telefono 
+From SOLAlumnoTelefono, SOLAlumno
+Where SOLAlumno.Legajo = SOLAlumnoTelefono.Legajo
+END
+
+ELSE
+BEGIN
+Select *
+
+From SOLAlumno
+
+END
