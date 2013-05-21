@@ -13,4 +13,9 @@
 *
 **/
 
--- NO ENTENDI EL ENUNCIADO --
+UPDATE SOLAlumno
+	SET CodEstado = 'I'
+
+UPDATE SOLDocente
+	SET eMail = 'm.quintana@solar.com'
+WHERE eMail LIKE 'maria.quintana@interbaires.com'
