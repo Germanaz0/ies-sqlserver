@@ -1,4 +1,6 @@
-ies-sqlserver
+IES - SQLServer
 =============
 
-Ejercicios de SQL server
+Ejercicios prácticos de sql server del año 2013.
+
+Alumno: Bortoli German
