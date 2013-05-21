@@ -1,3 +1,14 @@
+/**
+* p134-e02.sql
+*
+* @author Bortoli German <germanazo@gmail.com>
+* 
+* 2013 - IES - Santa Fe - Santa Fe
+*
+* Enunciado: 
+*
+**/
+
 Create Procedure Cap923
 
 @Legajo INT,

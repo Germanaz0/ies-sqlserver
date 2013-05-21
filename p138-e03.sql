@@ -1,3 +1,14 @@
+/**
+* p138-e03.sql
+*
+* @author Bortoli German <germanazo@gmail.com>
+* 
+* 2013 - IES - Santa Fe - Santa Fe
+*
+* Enunciado: 
+*
+**/
+
 Create Procedure ActualizarMateria
 @CodCarrera int,
 @CodMateria int

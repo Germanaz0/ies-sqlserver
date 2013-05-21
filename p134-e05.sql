@@ -1,8 +1,19 @@
+/**
+* p134-e05.sql
+*
+* @author Bortoli German <germanazo@gmail.com>
+* 
+* 2013 - IES - Santa Fe - Santa Fe
+*
+* Enunciado: 
+*
+**/
+
 Create procedure BuscarLegApeMatCarr
-@Legajo INT,
-@Apellido VARCHAR,
-@Materia INT,
-@Carrera INT
+	@Legajo INT,
+	@Apellido VARCHAR,
+	@Materia INT,
+	@Carrera INT
 AS
 
 Select Legajo= @Legajo

@@ -1,3 +1,14 @@
+/**
+* p136-e03.sql
+*
+* @author Bortoli German <germanazo@gmail.com>
+* 
+* 2013 - IES - Santa Fe - Santa Fe
+*
+* Enunciado: 
+*
+**/
+
 Create procedure CargaTelAlumno
 
 @Legajo INT,
